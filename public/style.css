@@ -74,3 +74,10 @@ html{
     font-size:25px;
     font-family:Courier New;
 }
+
+.table-bordered{
+    margin:auto 0;
+}
+.table{
+    width:50%
+}
