@@ -1,0 +1,83 @@
+body{
+    background:white;
+    
+   
+}
+
+html{
+    box-sizing:border-box;
+    }
+    *,*:before, *:after{
+    box-sizing:inherit;
+    }
+    
+.header_title{
+    color:white;
+    font-size:120px;
+    font-family:Exo;
+    
+    padding-top:20px;
+    padding-left:20px
+}
+.fileinput{
+    
+    padding-top:40px;
+    padding-bottom:40px
+}
+
+
+.details{
+    display:inline-block;
+    width:100%;
+    color:white;
+}
+.details h1{
+    padding-top:20px;
+    padding-left:20px;
+}
+
+.nav-tabs a{
+    color:#000026;
+    font-family:Exo;
+    font-size:20px;
+}
+
+.upper-content{
+  
+    
+    height:500px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("dna.png");
+    background-repeat: no-repeat;
+}
+
+.upper-content h2{
+    font-family:Exo;
+    color:white; 
+    width:500px;
+    float: right;
+    padding-right:10px;
+}
+
+.upper-content h3{
+    color:white; 
+    padding-left:30px;
+    font-family: 'Exo',Light Italic;
+}
+
+.about h1{
+    font-size:25px;
+    font-family:Courier New;
+}
+
+.details h1{
+   
+    font-size:25px;
+    font-family:Courier New;
+}
+
+.table-bordered{
+    margin:auto 0;
+}
+.table{
+    width:50%
+}
