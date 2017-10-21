@@ -1,5 +1,6 @@
 body{
-    background:#778899;
+    background:white;
+    
    
 }
 
@@ -10,32 +11,20 @@ html{
     box-sizing:inherit;
     }
     
-
-#wrapper{
-    margin-left:auto;
-	margin-right:auto;
-	width:1000px;
-	padding-bottom:20px;
-}
-
-header{
+.header_title{
     color:white;
-    font-size:50px;
-    font-family:Courier New;
-    text-align:center; 
+    font-size:120px;
+    font-family:Exo;
+    
+    padding-top:20px;
+    padding-left:20px
 }
-.fileInput{
-    display:block;
+.fileinput{
+    
+    padding-top:40px;
+    padding-bottom:40px
+}
 
-    padding:80px;
-    text-align:center;
-    height:200px
-}
-.fileInput input{
-
-    text-align:center;
-    padding-left:30px
-}
 
 .details{
     display:inline-block;
@@ -43,22 +32,38 @@ header{
     color:white;
 }
 .details h1{
+    padding-top:20px;
     padding-left:20px;
 }
-.about{
-    background-color:#000026;
-    width:490px;
-    height:300px;
-    float:left;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+.nav-tabs a{
+    color:#000026;
+    font-family:Exo;
+    font-size:20px;
 }
-.how{
-    background-color:#000026;
-    width:490px;
-    height:300px;
-    float:right;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+.upper-content{
+  
+    
+    height:500px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("dna.png");
+    background-repeat: no-repeat;
 }
+
+.upper-content h2{
+    font-family:Exo;
+    color:white; 
+    width:500px;
+    float: right;
+    padding-right:10px;
+}
+
+.upper-content h3{
+    color:white; 
+    padding-left:30px;
+    font-family: 'Exo',Light Italic;
+}
+
 .about h1{
     font-size:25px;
     font-family:Courier New;
