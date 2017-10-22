@@ -48,6 +48,8 @@ html{
     height:500px;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("dna.png");
     background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
 
 }
 
@@ -63,6 +65,7 @@ html{
     color:white; 
     padding-left:30px;
     font-family: 'Exo',Light Italic;
+    width:300px;
 }
 
 .upper-content h4{
@@ -70,7 +73,7 @@ html{
     color:white;
     position: relative;
     top:75px;
-    left: 225px;
+    width: 400px;
 }
 .upper-content h5{
     animation-delay: 1.5s;
@@ -78,9 +81,11 @@ html{
     position: relative;
     top:75px;
     left: 150px;
+    width: 300px;
 }
 .upper-content small{
     color:white;
+    width: 500px;
 }
 
 
@@ -202,4 +207,8 @@ html{
     right: 80px;
     float: right;
     font-size: 25px;
+}
+
+h4, h5 {
+    overflow: hidden;
 }
