@@ -33,75 +33,140 @@
         <div class="leftbarbox">
             Muscular Endurance
             <div class="progress skill-bar ">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{endurancePerformanceScore*20}}" aria-valuemin="0" aria-valuemax="100">
                     <span class="skill"><i class="val">{{endurancePerformanceScore}}</i></span>
                 </div>
             </div>
+
             Protein Intake
             <div class="progress skill-bar ">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{proteinIntakeScore*20}}" aria-valuemin="0" aria-valuemax="100">
                     <span class="skill"><i class="val">{{proteinIntakeScore}}</i></span>
                 </div>
             </div>
+
             Carbohydrate Intake
             <div class="progress skill-bar ">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{carbohydrateIntakeScore*20}}" aria-valuemin="0" aria-valuemax="100">
                     <span class="skill"><i class="val">{{carbohydrateIntakeScore}}</i></span>
                 </div>
             </div>
+
             Vitamin A
-            <div class="progress skill-bar ">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <span class="skill"><i class="val">{{vitaminAScore}}</i></span>
+            {% if vitaminAScore != None %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{vitaminAScore*20}}" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{vitaminAScore}}</i></span>
+                    </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{vitaminAScore}}</i></span>
+                    </div>
+                </div>
+            {% endif %}
+
             Vitamin B12
-            <div class="progress skill-bar ">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <span class="skill"><i class="val">{{vitaminB12Score}}</i></span>
+            {% if vitaminB12Score != None %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{vitaminB12Score*20}}" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{vitaminB12Score}}</i></span>
+                    </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{vitaminB12Score}}</i></span>
+                    </div>
+                </div>
+            {% endif %}
         </div>
         
         <div class="rightbarbox">
             Vitamin D
-            <div class="progress skill-bar ">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <span class="skill"><i class="val">{{vitaminDScore}}</i></span>
+            {% if vitaminDScore != None %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{vitaminDScore*20}}" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{vitaminDScore}}</i></span>
+                    </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{vitaminDScore}}</i></span>
+                    </div>
+                </div>
+            {% endif %}
+
             Vitamin E
-            <div class="progress skill-bar ">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <span class="skill"><i class="val">{{vitaminEScore}}</i></span>
+            {% if vitaminEScore != None %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{vitaminEScore*20}}" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{vitaminEScore}}</i></span>
+                    </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{vitaminEScore}}</i></span>
+                    </div>
+                </div>
+            {% endif %}
+
             Calcium
-            <div class="progress skill-bar ">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <span class="skill"><i class="val">{{calciumScore}}</i></span>
+            {% if calciumScore != None %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{calciumScore*20}}" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{calciumScore}}</i></span>
+                    </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{calciumScore}}</i></span>
+                    </div>
+                </div>
+            {% endif %}
+
             Magnesium
-            <div class="progress skill-bar ">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <span class="skill"><i class="val">{{magnesiumScore}}</i></span>
+            {% if magnesiumScore != None %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{magnesiumScore*20}}" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{magnesiumScore}}</i></span>
+                    </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{magnesiumScore}}</i></span>
+                    </div>
+                </div>
+            {% endif %}
+
             Iron
-            <div class="progress skill-bar ">
-                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                    <span class="skill"><i class="val">{{ironScore}}</i></span>
+            {% if ironScore != None %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ironScore*20}}" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{ironScore}}</i></span>
+                    </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="progress skill-bar ">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <span class="skill"><i class="val">{{ironScore}}</i></span>
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </div>
 
+    {% if endurancePerformanceScore != None %}
     <div class="left_content animated fadeInRight">
             <h1>Muscular Endurance</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{endurancePerformanceScore*20}}" aria-valuemin="0" aria-valuemax="100">
                         <span class="skill"><i class="val">{{endurancePerformanceScore}}</i></span>
                     </div>
                 </div>
@@ -110,20 +175,23 @@
             {% if endurancePerformanceScore <= 1 %}
             <h2 >You are best suited for quick, high intensity workouts</h2>
             <p>Muscular endurance is affected by our genetics, and your muscle fibers do not favor extended periods of training. Try to focus on explosive, high intensity workouts over a short period of time for increases in strength and fitness.</p>
-            {% elseif endurancePerformanceScore == 2 %}
+            {% elif endurancePerformanceScore == 2 %}
             <h2>You are best suited for workouts of moderate intensity</h2>
             <p>Different muscle types favor explosive movements or long feats of endurance, and you fall somewhere in the middle. Try to strike a balance between short, intense workouts and extended, light workouts.</p>
             {% else %}
             <h2 >You are best suited for extended endurance workouts</h2>
             <p>Better start training for the next marathon in your area! Muscle types and proportions are determined to an extent by your genes, and your muscles are have the upper hand when it comes to muscular endurance.</p>
             {% endif %}
-    </div>
 
+    </div>
+    {% endif %}
+
+    {% if proteinIntakeScore != None %}
     <div class="left_content animated fadeInRight">
             <h1>Protein Intake</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{proteinIntakeScore*20}}" aria-valuemin="0" aria-valuemax="100">
                         <span class="skill"><i class="val">{{proteinIntakeScore}}</i></span>
                     </div>
                 </div>
@@ -131,20 +199,27 @@
             {% if proteinIntakeScore <= 1 %}
             <h2 >You absorb protein faster than average</h2>
             <p>You have a higher rate of absorption of protein than the average human, and therefore do not need to consume as much protein than the recommended amount for your body weight. You can afford shift your attention on other sources of nutrition!</p>
-            {% elseif proteinIntakeScore == 2 %}
+            {% elif proteinIntakeScore == 2 %}
             <h2>You absorb protein at an average rate</h2>
             <p>You should consume the recommended amount of protein per day depending on your body weight, as well as your fitness goals.</p>
             {% else %}
             <h2 >You absorb protein slower than average</h2>
             <p>Your body does not absorb protein very quickly, which means you need to focus on increasing your protein intake. Try to eat slightly more protein than the recommended amount, depending on your fitness goals and body weight.</p>
             {% endif %}
-    </div>
 
+            <br>
+
+            <p>Protein rich food: Chicken, beef, tuna, eggs, almonds, peanuts, oats, cheese, milk, brocolli, brussels sprouts, grapefruit</p>
+
+    </div>
+    {% endif %}
+
+    {% if carbohydrateIntakeScore != None %}
     <div class="left_content animated fadeInRight">
             <h1>Carbohydrate Intake</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{carbohydrateIntakeScore*20}}" aria-valuemin="0" aria-valuemax="100">
                         <span class="skill"><i class="val">{{carbohydrateIntakeScore}}</i></span>
                     </div>
                 </div>
@@ -152,20 +227,26 @@
             {% if carbohydrateIntakeScore <= 1 %}
             <h2 >You absorb carbohydrates faster than average</h2>
             <p>Your body absorbs carbohydrates at an above-average rate, so you can ease off the carbs a bit. Extra carbohydrates can turn to fat, so put your focus more on your vitamin and mineral intake.</p>
-            {% elseif carbohydrateIntakeScore == 2 %}
+            {% elif carbohydrateIntakeScore == 2 %}
             <h2>You absorb carbohydrates at an average rate</h2>
             <p>You should eat the recommended amount of carbohydrates per day based on your body weight and fitness goals. Excess carbohydrates can turn to fat, so make sure to not go over the limit!</p>
             {% else %}
             <h2 >You absorb carbohydrates slower than average</h2>
             <p>Because you absorb carbohydrates more slowly than average, you require a slightly larger amount to gain the same effect. Eat slightly more than the recommened amount, but be careful! Excess carbohydrates can turn to fat, so be sure to not overdo it.</p>
             {% endif %}
-    </div>
 
+            <br>
+
+            <p>Carbohydrate rich food: Oatmeal, brown/white rice, yams, potatoes, whole wheat bread, beans and lentils, apples, kale, brocolli, spinach, onions, zucchini</p>
+    </div>
+    {% endif %}
+
+    {% if vitaminAScore != None %}
     <div class="left_content animated fadeInRight">
             <h1>Vitamin A</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{vitaminAScore*20}}" aria-valuemin="0" aria-valuemax="100">
                         <span class="skill"><i class="val">{{vitaminAScore}}</i></span>
                     </div>
                 </div>
@@ -173,20 +254,26 @@
             {% if vitaminAScore <= 1 %}
             <h2>You have a natually lower level of Vitamin A </h2>
             <p>Your genome sequence indicated a tendency to have lower levels in vitamin A, which can lead to dry skin, headaches, nausea, and have a higher risk of infection. Try to focus on consuming foods that are rich in vitamin A to comabt this.</p>
-            {% elseif vitaminAScore == 2 %}
+            {% elif vitaminAScore == 2 %}
             <h2>You have a normal amount of vitamin A</h2>
             <p>This means you do not have to worry much about low levels of vitamin A, but it is still something that you should not neglect. Low vitamin A levels can lead to dry skin, headaches, nausea, and an increased risk of infection. Be sure to get a healthy amount of vitamin A in your diet.</p>
             {% else %}
             <h2 >You have higher levels of vitamin A</h2>
             <p>You do not have an issue with vitamin A, and you probably don't have to worry as much about deficiencies. Try to place your focus on other areas of micronutrient deficiencies, but don't neglect vitamin A entirely!</p> 
             {% endif %}
-    </div>
 
+            <br>
+
+            <p>Vitamin A rich foods: Beef/lamb liver, carrots, sweet potato, kale, spinach, brocolli, butter, eggs, salmon, tuna, mango, cantaloupe, tangerine, nectarine</p>
+    </div>
+    {% endif %}
+
+    {% if vitaminB12Score != None %}
     <div class="left_content animated fadeInRight">
             <h1>Vitamin B12</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{vitaminB12Score*20}}" aria-valuemin="0" aria-valuemax="100">
                         <span class="skill"><i class="val">{{vitaminB12Score}}</i></span>
                     </div>
                 </div>
@@ -194,20 +281,26 @@
             {% if vitaminB12Score <= 1 %}
             <h2 >You have a naturally lower level of Vitamin B12</h2>
             <p>Your genes indicate a naturally lower level of vitamin B12, an important part of red blood cell formation. A vitamin B12 deficiency can lead to anaemia, and your naturally low concentration leaves you at slightly greater risk, so try to fit in foods that are favorable throughout your meals.</p>
-            {% elseif vitaminB12Score == 2 %}
+            {% elif vitaminB12Score == 2 %}
             <h2>You have a normal amount of Vitamin B12</h2>
             <p>Vitamin B12 is not something that you generally have to worry about, but be sure to get some vitamin B12 in your diet sometime throughout your week. It is essential to red blood cell formation, and vitamin B12 deficiencies can lead to anaemia in extreme cases, though it is very rare.</p>
             {% else %}
             <h2>You tend to have higher levels of Vitamin B12</h2>
             <p>You don't have to worry about vitamin B12 as much, but be sure to still get a healthy amount in your diet. Vitamin B12 helps with the formation of red blood cells, so a little more can only help! You are also at lower risk of anaemia.</p>
             {% endif %}
-    </div>
 
+            <br>
+
+            <p>Vitamin B12 rich foods: milk, chocolate, cheese, yogurt, liver, kidney, chicken, beef, pork, salmon, tuna</p>
+    </div>
+    {% endif %}
+
+    {% if vitaminDScore != None %}
     <div class="left_content animated fadeInRight">
             <h1>Vitamin D</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{vitaminDScore*20}}" aria-valuemin="0" aria-valuemax="100">
                         <span class="skill"><i class="val">{{vitaminDScore}}</i></span>
                     </div>
                 </div>
@@ -215,20 +308,26 @@
             {% if vitaminDScore <= 1 %}
             <h2 >You have a naturally lower level of Vitamin D</h2>
             <p>Vitamin D helps absorption of calcium in the intestine and kidneys, and it also strengthens the bones. You are at a greater risk of a deficiency, which can affect growth and bone strength, so be sure to make a conscious effort to incorporate vitamin D into your diet, especially if you are in a period of growth or engage in regular physical activity.</p>
-            {% elseif vitaminDScore == 2 %}
+            {% elif vitaminDScore == 2 %}
             <h2>You have a normal amount of Vitamin D</h2>
             <p>Vitamin D helps with calcium absorption and bone growth, as well as fighting off sun rays. Eat large amounts of vitamin D when growing, as well as when engaging in lots of physical activity.</p>
             {% else %}
             <h2>You tend to have larger amounts of Vitamin D</h2>
             <p>Vitamin D helps with bone growth and fighting off sun rays. You tend to have less of a problem keeping higher levels of vitamin D, but be sure to still eat a large amount to maintain high bone strength and growth potential.</p>
             {% endif %}
-    </div>
 
+            <br>
+
+            <p>Vitamin D rich foods: cereal, egg yolk, salmon, tuna, milk, mushrooms, tofu, fruit juice, oranges</p>
+    </div>
+    {% endif %}
+
+    {% if vitaminEScore != None %}
     <div class="left_content animated fadeInRight">
             <h1>Vitamin E</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{vitaminEScore*20}}" aria-valuemin="0" aria-valuemax="100">
                         <span class="skill"><i class="val">{{vitaminEScore}}</i></span>
                     </div>
                 </div>
@@ -236,20 +335,26 @@
             {% if vitaminEScore <= 1 %}
             <h2 >You have a naturally lower level of Vitamin E</h2>
             <p>Vitamin E is essential as a natural anti-acid, as it helps stop fat from turning acidic in the body, as well as slowing the aging of cells. A lower amount may cause skin to age more rapidly, so vitamin E is known mostly for its skin care capabilities.</p>
-            {% elseif vitaminEScore == 2 %}
+            {% elif vitaminEScore == 2 %}
             <h2>You have a normal amount of Vitamin E</h2>
             <p>Vitamin E is known for slowing the aging of skin, so having a normal amount of vitamin E means you can afford to intake some more to keep your skin nice and young.</p>
             {% else %}
             <h2>You tend to have higher levels of Vitamin E</h2>
             <p>Vitamin E naturally prevents skin from aging, so having a larger amount is only a good thing when it comes to skin care. Consuming additional vitamin E will likely keep your already fair skin looking even smoother and younger.</p>
             {% endif %}
-    </div>
 
+            <br>
+
+            <p>Vitamin E rich foods: Almonds, spinach, avocado, wheat germ, sunflower seeds, butternut squash, olive oil, kale, hazelnuts, pine nuts, olives, brocolli</p>
+    </div>
+    {% endif %}
+
+    {% if calciumScore != None %}
     <div class="left_content animated fadeInRight">
             <h1>Calcium</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{calciumScore*20}}" aria-valuemin="0" aria-valuemax="100">
                         <span class="skill"><i class="val">{{calciumScore}}</i></span>
                     </div>
                 </div>
@@ -257,20 +362,26 @@
             {% if calciumScore <= 1 %}
             <h2 >You have a naturally lower level of Calcium</h2>
             <p>Calcium is essential to bone growth and bone strength. A deficiency in calcium can lead to low bone density and a lower rate of growth. Try to intake a larger amount of calcium than normal to counteract this deficiency.</p>
-            {% elseif calciumScore == 2 %}
+            {% elif calciumScore == 2 %}
             <h2>You have a normal amount of Calcium</h2>
             <p>Your calcium levels are average, but it does not hurt to consume large amounts of calcium to maintain strong bones. Don't neglect calcium intake, especially when you're experiencing periods of growth.</p>
             {% else %}
             <h2>Your Calcium levels are naturally higher</h2>
             <p>You have a natually greater amount of calcium in your body, but it is still important to intake large amounts when you are growing. Calcium increases your bone density, so consuming calcium will only improve your overall health.</p>
             {% endif %}
-    </div>
 
+            <br>
+
+            <p>Calcium rich foods: Milk, cheese, yogurt, sunflower seeds, clams, green beans, baby carrots, figs, brocolli, oranges, almonds, butternut squash, kelp, edamame</p>
+    </div>
+    {% endif %}
+
+    {% if magnesiumScore != None %}
     <div class="left_content animated fadeInRight">
             <h1>Magnesium</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{magnesiumScore*20}}" aria-valuemin="0" aria-valuemax="100">
                         <span class="skill"><i class="val">{{magnesiumScore}}</i></span>
                     </div>
                 </div>
@@ -278,20 +389,26 @@
             {% if magnesiumScore <= 1 %}
             <h2 >You have a naturally lower level of Magnesium</h2>
             <p>Most of the magnesium in your body resides in your bones, and it works together with phosphorous to create calcium. A deficiency in magnesium leads to higher risk of deficiency in calcium, so be conscious about your magnesium intake for bone health.</p>
-            {% elseif magnesiumScore == 2 %}
+            {% elif magnesiumScore == 2 %}
             <h2>Your have a normal amount of Magnesium</h2>
             <p>Magnesium resides mostly in your bones, and it works together with phosphorous to create calcium. Don't neglect magnesium intake, as it affects your bone strength.</p>
             {% else %}
             <h2>Your Magnesium levels are naturally higher</h2>
             <p>Magnesium works with phosphorous to create calcium for your body, and most of it is in your bones. Your higher levels of magnesium make it easier to create calcium. Do not neglect your magnesium intake, but don't stress over it either.</p>
             {% endif %}
-    </div>
 
+            <br>
+
+            <p>Magnesium rich foods: spinach, chard, pumpkin seeds, almonds, black beans, avocado, figs, dark chocolate, banana, tofu</p>
+    </div>
+    {% endif %}
+
+    {% if ironScore != None %}
     <div class="left_content animated fadeInRight">
             <h1>Iron</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
-                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ironScore*20}}" aria-valuemin="0" aria-valuemax="100">
                         <span class="skill"><i class="val">{{ironScore}}</i></span>
                     </div>
                 </div>
@@ -299,14 +416,19 @@
             {% if ironScore <= 1 %}
             <h2 >You have a naturally lower level of Iron</h2>
             <p>Iron is an essential part of your blood, and it is required for transporting oxygen in the blood. Iron deficiencies leave individuals at a greater risk of anaemia, so be sure to eat larger amounts of iron to fight against your naturally lower levels.</p>
-            {% elseif ironScore == 2 %}
+            {% elif ironScore == 2 %}
             <h2>You have a normal amount of Iron</h2>
             <p>Iron is an essential part of your blood, and it is required to carry oxygen to different parts of the body. Do not neglect iron intake, as a low level of iron leaves you at risk for anaemia.</p>
             {% else %}
             <h2>Your Iron levels are naturally higher</h2>
             <p>ron is an essential part of your blood, and it is required to carry oxygen to different parts of the body. You don't have to worry about iron intake as much as the average person, but neglect of iron consumption can lead to anaemia, so be sure to find areas in your diet to add iron.</p>
             {% endif %}
+
+            <br>
+
+            <p>Iron rich foods: dark chocolate, lentils, spinach, pumpkin seeds, tofu, quinoa, beans, leaf vegetables, broccoli, potatoes, cereal, raisins, prunes</p>
     </div>
+    {% endif %}
 
     </div> 
 

@@ -152,7 +152,7 @@ html{
     float: left;
     width: 150px;
     height: 150px;
-    margin: 0px 60px 0px 30px;
+    margin: 0px 40px 0px 30px;
 }
 
 .rightpic {
@@ -161,7 +161,7 @@ html{
 
     width: 200px;
     height: 200px;
-    margin: -20px 140px;
+    margin: 20px 140px 10px 140px;
 }
 
 .progress {
