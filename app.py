@@ -8,19 +8,21 @@ from flask import Flask,render_template,url_for,request,redirect,session
 app=Flask(__name__)
 
 phenotypeDict = {}
+scopeURL = ['report:protein-intake report:carbohydrate-intake report:vitamin-a report:vitamin-b12 report:vitamin-d report:vitamin-e report:calcium report:magnesium report:iron report:endurance-performance']
+scopeList = ['protein-intake', 'carbohydrate-intake', 'vitamin-a', 'vitamin-b12', 'vitamin-d', 'vitamin-e', 'calcium', 'magnesium', 'iron', 'endurance-performance']
+reports = []
 
 @app.route('/')
 def index():
-    retrieveData()
-    authorize_url = genomelink.OAuth.authorize_url(scope=['report:eye-color report:beard-thickness report:morning-person'])
+    #retrieveData()
+    authorize_url = genomelink.OAuth.authorize_url(scope=scopeURL)
 
-    if request.method=="POST":
-        redirect(url_for("results"))
+    #if request.method=="POST":
+     #   redirect(url_for("results"))
 
     # Fetching a protected resource using an OAuth2 token if exists.
-    reports = []
     if session.get('oauth_token'):
-        for name in ['eye-color', 'beard-thickness', 'morning-person']:
+        for name in scopeList:
             reports.append(genomelink.Report.fetch(name=name, population='european', token=session['oauth_token']))
 
     return render_template('home.html', authorize_url=authorize_url, reports=reports)
@@ -43,7 +45,9 @@ def aboutus():
 
 @app.route('/results')
 def results():
-    return render_template('results.html', endurancePerformanceScore=phenotypeDict["Endurance performance"])
+    #for r in reports:
+
+    return render_template('results.html', endurancePerformanceScore=reports[9].summary["score"])
 
 def retrieveData():
     '''
@@ -75,7 +79,7 @@ if __name__ == '__main__':
 
     os.environ['GENOMELINK_CLIENT_ID'] = 'YzGnFx2R22CyBJIJideBMmF7wIzgh7BonuP4e0wK'
     os.environ['GENOMELINK_CLIENT_SECRET'] = '3lhQcLOj3eK413GwTsXVaP6cEHglQ5AVg6DAJmQ2JpdoztK2PrHcca2QrXVI8YnSW4zNpkkvIxxe6WdcRbGswigSZcj3DZR9CJTsPaFoZIDvrAeE5CQxQe2WloylluaE'
-    os.environ['GENOMELINK_CALLBACK_URL'] = 'http://127.0.0.1:5000/callback'
+    os.environ['GENOMELINK_CALLBACK_URL'] = 'http://localhost:5000/callback'
 
     # Run local server on port 5000.
     app.secret_key = os.urandom(24)
