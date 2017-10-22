@@ -51,26 +51,13 @@
         <center>
             {% if not reports %}
             <h1 style="padding-top:30px; padding-bottom:20px" class=" animated fadeInUp">Just connect with Genome, and we'll personalize dietary and exercise recommendations that's fit for you! </h1>
-            <table class = "table">
-                <thead >
-                   <tr>
-                      <th><a href="{{ authorize_url }}">  <button style="font-size:20px" class = "btn btn-default">Connect with Genome</button></a></th>
+              <a href="{{ authorize_url }}">  <button style="font-size:20px;margin-bottom: 60px" class = "btn btn-default">Connect with Genome</button></a>
                       <!-- <script>$(":file").filestyle({buttonBefore: true});</script> -->
-                   </tr>
-                </thead>
-            </table>
+                
             {% else %}
-            <h1 style="padding-top:30px; padding-bottom:20px" class=" animated fadeInUp">Your genome sequence was succesfully analyzed!</h1>
-            <table class = "table">
-                <thead >
-                   <tr>
-                      <th><a href="results">  <button style="font-size:20px" class = "btn btn-default">See Your Results</button></a></th>
-                   </tr>
-                </thead>
-            </table>
+            <h1 style="padding-top:30px; padding-bottom:20px;" class=" animated fadeInUp">Your genome sequence was succesfully analyzed!</h1>
+              <a href="results">  <button style="font-size:20px; margin-bottom: 60px" class = "btn btn-default">See Your Results</button></a>
             {% endif %}
-
-
 
         </center>
         </div>

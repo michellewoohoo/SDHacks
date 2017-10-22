@@ -46,8 +46,9 @@ def aboutus():
 
 @app.route('/results')
 def results():
-    
-    return render_template('results.html', proteinIntakeScore=reports[0].summary["score"], carbohydrateIntakeScore=reports[1].summary["score"], vitaminAScore=reports[3].summary["score"], vitaminB12Score=reports[4].summary["score"], vitaminDScore=reports[5].summary["score"], vitaminEScore=reports[6].summary["score"], calciumScore=reports[7].summary["score"], magnesiumScore=reports[8].summary["score"], endurancePerformanceScore=reports[9].summary["score"])
+    #for r in reports:
+
+    return render_template('results.html', proteinIntakeScore=reports[0].summary["score"], carbohydrateIntakeScore=reports[1].summary["score"], vitaminAScore=reports[2].summary["score"], vitaminB12Score=reports[3].summary["score"], vitaminDScore=reports[4].summary["score"], vitaminEScore=reports[5].summary["score"], calciumScore=reports[6].summary["score"], magnesiumScore=reports[7].summary["score"], ironScore=reports[8].summary["score"], endurancePerformanceScore=reports[9].summary["score"])
 
 def retrieveData():
     '''
