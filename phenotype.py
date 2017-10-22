@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import json
-import requests  # pip install requests
-
 class Phenotype():
     def __init__(self, phenotype, text, score):
         self._phenotype = phenotype
