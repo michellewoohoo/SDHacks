@@ -19,20 +19,16 @@
                     <li><a href="#">How It Works</a></li>
                     <li><a href="#">Contact Us</a></li>
             </ul>
-    <div class="result_content">       
+    <div class="result_content">    
     <h1 style="padding-left:30px; padding-top:30px">Based on your genetic data...</h1>
     <div class="left_content animated fadeInRight">
-            <h2 >You are best suited for anaerobic exercises</h2>
-            <p>ljsdlkfljksdfjkljklsdfkldjsflksjdflksdjklf
-                jklsdkljfjsdkljfdskljflksdjlkfjlksdfjlksdjlkflkjsdfjklsdjlkfj
-                ljsdlkfljksdfjkljklsdfkldjsflksjdflksdjklfjklsdkljfjsdkl
-                jfdskljflksd
-                jlkfjlksdfjlksdjlkflkjsdfjklsdjlkfj
-                jlkfjlksdfjlksdjlkflkjsdfjklsdjlkfj
-                jlkfjlksdfjlksdjlkflkjsdfjklsdjlkfjjlkfjlksdfjlksdjlkflkjsdfjklsdjlkfj
-                jlkfjlksdfjlksdjlkflkjsdfjklsdjlkfjjlkfjlksdfjlksdjlkflkjsdfjklsdjlkfj
-                jlkfjlksdfjlksdjlkflkjsdfjklsdjlkfjjlkfjlksdfjlksdjlkflkjsdfjklsdjlkfj
-                jlkfjlksdfjlksdjlkflkjsdfjklsdjlkfjjlkfjlksdfjlksdjlkflkjsdfjklsdj</p>
+            {% if endurancePerformanceScore <= 1 %}
+            <h2 >You are best suited for low-impact workouts</h2>
+            <p>Your genome sequence revealed a low score in endurance performance. Muscle porportions are determined to an extent by your genes, and your muscles are best suited for short distance</p>
+            {% else %}
+            <h2 >You are best suited for high-impact workouts</h2>
+            <p>Your genome sequence revealed a high score in endurance performance. Muscle porportions are determined to an extent by your genes, and your muscles are best suited for long distance</p>
+            {% endif %}
     </div>
 
     <div class="right_content animated fadeInLeft">
