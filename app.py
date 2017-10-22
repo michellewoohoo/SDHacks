@@ -50,6 +50,14 @@ def results():
 
     return render_template('results.html', proteinIntakeScore=reports[0].summary["score"], carbohydrateIntakeScore=reports[1].summary["score"], vitaminAScore=reports[2].summary["score"], vitaminB12Score=reports[3].summary["score"], vitaminDScore=reports[4].summary["score"], vitaminEScore=reports[5].summary["score"], calciumScore=reports[6].summary["score"], magnesiumScore=reports[7].summary["score"], ironScore=reports[8].summary["score"], endurancePerformanceScore=reports[9].summary["score"])
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/howitworks')
+def howitworks():
+    return render_template('howitworks.html')
+
 def retrieveData():
     '''
         Retrieves data from API and puts them into a dictionary. A phenotype value is paired with a list of its name description and score key
