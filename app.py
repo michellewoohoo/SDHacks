@@ -11,8 +11,11 @@ phenotypeDict = {}
 
 @app.route('/')
 def index():
-    retrieveData();
+    retrieveData()
     authorize_url = genomelink.OAuth.authorize_url(scope=['report:eye-color report:beard-thickness report:morning-person'])
+
+    if request.method=="POST":
+        redirect(url_for("results"))
 
     # Fetching a protected resource using an OAuth2 token if exists.
     reports = []
@@ -34,6 +37,14 @@ def callback():
     session['oauth_token'] = token
     return redirect(url_for('index'))
 
+@app.route('/aboutus')
+def aboutus():
+    return render_template('aboutus.html')
+
+@app.route('/results')
+def results():
+    return render_template('results.html', endurancePerformanceScore=phenotypeDict["Endurance performance"])
+
 def retrieveData():
     '''
         Retrieves data from API and puts them into a dictionary. A phenotype value is paired with a list of its name description and score key
@@ -54,13 +65,17 @@ def retrieveData():
         data_dict = json.loads(data_str)
         
         p = Phenotype(data_dict["phenotype"]["display_name"],data_dict["summary"]["text"],data_dict["summary"]["score"])
-        phenotypeDict[p._phenotype] = [p._text, p._score]
+        phenotypeDict[p._phenotype] = p._score
 
 if __name__ == '__main__':
     # This allows us to use a plain HTTP callback.
     import os
     os.environ['DEBUG'] = "1"
     os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+
+    os.environ['GENOMELINK_CLIENT_ID'] = 'YzGnFx2R22CyBJIJideBMmF7wIzgh7BonuP4e0wK'
+    os.environ['GENOMELINK_CLIENT_SECRET'] = '3lhQcLOj3eK413GwTsXVaP6cEHglQ5AVg6DAJmQ2JpdoztK2PrHcca2QrXVI8YnSW4zNpkkvIxxe6WdcRbGswigSZcj3DZR9CJTsPaFoZIDvrAeE5CQxQe2WloylluaE'
+    os.environ['GENOMELINK_CALLBACK_URL'] = 'http://127.0.0.1:5000/callback'
 
     # Run local server on port 5000.
     app.secret_key = os.urandom(24)
