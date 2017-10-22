@@ -49,16 +49,29 @@
 
         <div class="container">
         <center>
-            <h1 style="padding-top:30px; padding-bottom:20px" class=" animated fadeInUp">Insert genome sequence file: </h1>
+            {% if not reports %}
+            <h1 style="padding-top:30px; padding-bottom:20px" class=" animated fadeInUp">Just connect with Genome, and we'll personalize dietary and exercise recommendations that's fit for you! </h1>
             <table class = "table">
                 <thead >
                    <tr>
-                      <th><input style="font-size:25px;"type="file" class="filestyle" data-buttonBefore="true"></th>
-                      <th><a href="results">  <button style="font-size:20px"type = "submit" class = "btn btn-default">See my Results!</button></a></th>
-                      <script>$(":file").filestyle({buttonBefore: true});</script>
+                      <th><a href="{{ authorize_url }}">  <button style="font-size:20px" class = "btn btn-default">Connect with Genome</button></a></th>
+                      <!-- <script>$(":file").filestyle({buttonBefore: true});</script> -->
                    </tr>
                 </thead>
             </table>
+            {% else %}
+            <h1 style="padding-top:30px; padding-bottom:20px" class=" animated fadeInUp">Your genome sequence was succesfully analyzed!</h1>
+            <table class = "table">
+                <thead >
+                   <tr>
+                      <th><a href="results">  <button style="font-size:20px" class = "btn btn-default">See Your Results</button></a></th>
+                   </tr>
+                </thead>
+            </table>
+            {% endif %}
+
+
+
         </center>
         </div>
 
