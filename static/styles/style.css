@@ -141,3 +141,25 @@ html{
     width:300px
     
 }
+ 
+.contact-container{
+    margin: 0 auto; 
+    width:400px;
+}
+
+.leftpic {
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 0px 60px 0px 30px;
+}
+
+.rightpic {
+    position: relative;
+    float: right;
+
+    width: 200px;
+    height: 200px;
+    margin: -20px 140px;
+}

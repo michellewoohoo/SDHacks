@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-        <title> FitYourJeans </title>
+        <title> Results </title>
         
 
         <link href="https://fonts.googleapis.com/css?family=Exo|Pacifico" rel="stylesheet">
@@ -14,10 +14,13 @@
     </head>  
     <body>
             <ul class="nav nav-tabs">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="#">How It Works</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li class="dn  animated fadeIn"><a href="home.html">Home</a></li>
+                    <li class ="da animated fadeIn"><a href="aboutus.html">About Us</a></li>
+                    <li class ="dg animated fadeIn"><a href="howitworks.html">How It Works</a></li>
+                    <li class ="dr animated fadeIn"><a href="contact.html">Contact Us</a></li>
+
+                    <li class ="pull-right animated fadeInRight"><a href="#">Login</a></li>
+                    <li class ="pull-right animated fadeInRight"><a href="#">Sign Up</a></li>
             </ul>
     <div class="result_content">    
     <h1 style="padding-left:30px; padding-top:30px">Based on your genetic data...</h1>
@@ -25,9 +28,12 @@
             {% if endurancePerformanceScore <= 1 %}
             <h2 >You are best suited for low-impact workouts</h2>
             <p>Your genome sequence revealed a low score in endurance performance. Muscle porportions are determined to an extent by your genes, and your muscles are best suited for short distance</p>
+            {% elseif endurancePerformanceScore == 2 %}
+            <h2>Your endurance performance is balanced</h2>
+            <p>Your muscles are ok for any type of exercise</p>
             {% else %}
             <h2 >You are best suited for high-impact workouts</h2>
-            <p>Your genome sequence revealed a high score in endurance performance. Muscle porportions are determined to an extent by your genes, and your muscles are best suited for long distance</p>
+            <p>BIG BOY ALERT!!!!Your genome sequence revealed a high score in endurance performance. Muscle porportions are determined to an extent by your genes, and your muscles are best suited for long distance</p>
             {% endif %}
     </div>
 
