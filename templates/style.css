@@ -65,6 +65,25 @@ html{
     font-family: 'Exo',Light Italic;
 }
 
+.upper-content h4{
+    animation-delay: 1s;
+    color:white;
+    position: relative;
+    top:75px;
+    left: 225px;
+}
+.upper-content h5{
+    animation-delay: 1.5s;
+    color:white;
+    position: relative;
+    top:75px;
+    left: 150px;
+}
+.upper-content small{
+    color:white;
+}
+
+
 .about h1{
     font-size:25px;
     font-family:Courier New;
