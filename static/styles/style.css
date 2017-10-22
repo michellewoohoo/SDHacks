@@ -141,13 +141,12 @@ html{
     width:300px
     
 }
-
-<<<<<<< HEAD
+ 
 .contact-container{
     margin: 0 auto; 
     width:400px;
 }
-=======
+
 .leftpic {
     position: relative;
     float: left;
@@ -159,8 +158,8 @@ html{
 .rightpic {
     position: relative;
     float: right;
+
     width: 200px;
     height: 200px;
     margin: -20px 140px;
 }
->>>>>>> b3220dff399482721ae678c73d647e407e310d0a
