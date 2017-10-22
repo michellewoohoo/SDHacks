@@ -8,6 +8,7 @@
         <style type="text/css">
             h1 {
                 width: 50%;
+                margin-bottom: 25px;
             }
         </style>
 
@@ -163,6 +164,7 @@
 
     {% if endurancePerformanceScore != None %}
     <div class="left_content animated fadeInRight">
+            <img class="phenoImage" src="https://drive.google.com/uc?id=0Bz5OkCQSuFwYLVl0UWl3RjU0bEk">
             <h1>Muscular Endurance</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
@@ -172,6 +174,7 @@
                 </div>
             </div>
             
+            <div class="phenotext">
             {% if endurancePerformanceScore <= 1 %}
             <h2 >You are best suited for quick, high intensity workouts</h2>
             <p>Muscular endurance is affected by our genetics, and your muscle fibers do not favor extended periods of training. Try to focus on explosive, high intensity workouts over a short period of time for increases in strength and fitness.</p>
@@ -182,12 +185,14 @@
             <h2 >You are best suited for extended endurance workouts</h2>
             <p>Better start training for the next marathon in your area! Muscle types and proportions are determined to an extent by your genes, and your muscles are have the upper hand when it comes to muscular endurance.</p>
             {% endif %}
+            </div>
 
     </div>
     {% endif %}
 
     {% if proteinIntakeScore != None %}
     <div class="left_content animated fadeInRight">
+            <img class="phenoImage" src="https://drive.google.com/uc?id=0Bz5OkCQSuFwYbHo5cFpyUzM5ajA">
             <h1>Protein Intake</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
@@ -196,6 +201,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class="phenotext">
             {% if proteinIntakeScore <= 1 %}
             <h2 >You absorb protein faster than average</h2>
             <p>You have a higher rate of absorption of protein than the average human, and therefore do not need to consume as much protein than the recommended amount for your body weight. You can afford shift your attention on other sources of nutrition!</p>
@@ -206,6 +213,7 @@
             <h2 >You absorb protein slower than average</h2>
             <p>Your body does not absorb protein very quickly, which means you need to focus on increasing your protein intake. Try to eat slightly more protein than the recommended amount, depending on your fitness goals and body weight.</p>
             {% endif %}
+            </div>
 
             <br>
 
@@ -216,6 +224,7 @@
 
     {% if carbohydrateIntakeScore != None %}
     <div class="left_content animated fadeInRight">
+            <img class="phenoImage" src="https://drive.google.com/uc?id=0Bz5OkCQSuFwYWWQxNmkwc0czN28">
             <h1>Carbohydrate Intake</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
@@ -224,6 +233,7 @@
                     </div>
                 </div>
             </div>
+            <div class="phenotext">
             {% if carbohydrateIntakeScore <= 1 %}
             <h2 >You absorb carbohydrates faster than average</h2>
             <p>Your body absorbs carbohydrates at an above-average rate, so you can ease off the carbs a bit. Extra carbohydrates can turn to fat, so put your focus more on your vitamin and mineral intake.</p>
@@ -234,6 +244,7 @@
             <h2 >You absorb carbohydrates slower than average</h2>
             <p>Because you absorb carbohydrates more slowly than average, you require a slightly larger amount to gain the same effect. Eat slightly more than the recommened amount, but be careful! Excess carbohydrates can turn to fat, so be sure to not overdo it.</p>
             {% endif %}
+            </div>
 
             <br>
 
@@ -243,6 +254,7 @@
 
     {% if vitaminAScore != None %}
     <div class="left_content animated fadeInRight">
+            <img class="phenoImage" src="https://drive.google.com/uc?id=0Bz5OkCQSuFwYUzlIQU5IV1VOWkk">
             <h1>Vitamin A</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
@@ -251,6 +263,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class="phenotext">
             {% if vitaminAScore <= 1 %}
             <h2>You have a natually lower level of Vitamin A </h2>
             <p>Your genome sequence indicated a tendency to have lower levels in vitamin A, which can lead to dry skin, headaches, nausea, and have a higher risk of infection. Try to focus on consuming foods that are rich in vitamin A to comabt this.</p>
@@ -261,6 +275,7 @@
             <h2 >You have higher levels of vitamin A</h2>
             <p>You do not have an issue with vitamin A, and you probably don't have to worry as much about deficiencies. Try to place your focus on other areas of micronutrient deficiencies, but don't neglect vitamin A entirely!</p> 
             {% endif %}
+            </div>
 
             <br>
 
@@ -270,6 +285,7 @@
 
     {% if vitaminB12Score != None %}
     <div class="left_content animated fadeInRight">
+            <img class="phenoImage" src = "https://drive.google.com/uc?id=0Bz5OkCQSuFwYTkE4Rnlhdzc3aEU">
             <h1>Vitamin B12</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
@@ -278,6 +294,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class="phenotext">
             {% if vitaminB12Score <= 1 %}
             <h2 >You have a naturally lower level of Vitamin B12</h2>
             <p>Your genes indicate a naturally lower level of vitamin B12, an important part of red blood cell formation. A vitamin B12 deficiency can lead to anaemia, and your naturally low concentration leaves you at slightly greater risk, so try to fit in foods that are favorable throughout your meals.</p>
@@ -288,7 +306,8 @@
             <h2>You tend to have higher levels of Vitamin B12</h2>
             <p>You don't have to worry about vitamin B12 as much, but be sure to still get a healthy amount in your diet. Vitamin B12 helps with the formation of red blood cells, so a little more can only help! You are also at lower risk of anaemia.</p>
             {% endif %}
-
+            </div>
+            
             <br>
 
             <p>Vitamin B12 rich foods: milk, chocolate, cheese, yogurt, liver, kidney, chicken, beef, pork, salmon, tuna</p>
@@ -297,6 +316,7 @@
 
     {% if vitaminDScore != None %}
     <div class="left_content animated fadeInRight">
+            <img class="phenoImage" src="https://drive.google.com/uc?id=0Bz5OkCQSuFwYVVNHRC1HTTN6bGc">
             <h1>Vitamin D</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
@@ -305,6 +325,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class="phenotext">
             {% if vitaminDScore <= 1 %}
             <h2 >You have a naturally lower level of Vitamin D</h2>
             <p>Vitamin D helps absorption of calcium in the intestine and kidneys, and it also strengthens the bones. You are at a greater risk of a deficiency, which can affect growth and bone strength, so be sure to make a conscious effort to incorporate vitamin D into your diet, especially if you are in a period of growth or engage in regular physical activity.</p>
@@ -315,6 +337,7 @@
             <h2>You tend to have larger amounts of Vitamin D</h2>
             <p>Vitamin D helps with bone growth and fighting off sun rays. You tend to have less of a problem keeping higher levels of vitamin D, but be sure to still eat a large amount to maintain high bone strength and growth potential.</p>
             {% endif %}
+            </div>
 
             <br>
 
@@ -324,6 +347,7 @@
 
     {% if vitaminEScore != None %}
     <div class="left_content animated fadeInRight">
+            <img class="phenoImage" src="https://drive.google.com/uc?id=0Bz5OkCQSuFwYRFc3MWdEREVmYU0">
             <h1>Vitamin E</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
@@ -332,6 +356,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class="phenotext">
             {% if vitaminEScore <= 1 %}
             <h2 >You have a naturally lower level of Vitamin E</h2>
             <p>Vitamin E is essential as a natural anti-acid, as it helps stop fat from turning acidic in the body, as well as slowing the aging of cells. A lower amount may cause skin to age more rapidly, so vitamin E is known mostly for its skin care capabilities.</p>
@@ -342,6 +368,7 @@
             <h2>You tend to have higher levels of Vitamin E</h2>
             <p>Vitamin E naturally prevents skin from aging, so having a larger amount is only a good thing when it comes to skin care. Consuming additional vitamin E will likely keep your already fair skin looking even smoother and younger.</p>
             {% endif %}
+            </div>
 
             <br>
 
@@ -351,6 +378,7 @@
 
     {% if calciumScore != None %}
     <div class="left_content animated fadeInRight">
+            <img class="phenoImage" src="https://drive.google.com/uc?id=0Bz5OkCQSuFwYc0g4VEZsbzBOWlU">
             <h1>Calcium</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
@@ -359,6 +387,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class="phenotext">
             {% if calciumScore <= 1 %}
             <h2 >You have a naturally lower level of Calcium</h2>
             <p>Calcium is essential to bone growth and bone strength. A deficiency in calcium can lead to low bone density and a lower rate of growth. Try to intake a larger amount of calcium than normal to counteract this deficiency.</p>
@@ -369,6 +399,7 @@
             <h2>Your Calcium levels are naturally higher</h2>
             <p>You have a natually greater amount of calcium in your body, but it is still important to intake large amounts when you are growing. Calcium increases your bone density, so consuming calcium will only improve your overall health.</p>
             {% endif %}
+            </div>
 
             <br>
 
@@ -378,6 +409,7 @@
 
     {% if magnesiumScore != None %}
     <div class="left_content animated fadeInRight">
+            <img class="phenoImage" src="https://drive.google.com/uc?id=0Bz5OkCQSuFwYb3lSbXB0MzNjcWc">
             <h1>Magnesium</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
@@ -386,6 +418,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class="phenotext">
             {% if magnesiumScore <= 1 %}
             <h2 >You have a naturally lower level of Magnesium</h2>
             <p>Most of the magnesium in your body resides in your bones, and it works together with phosphorous to create calcium. A deficiency in magnesium leads to higher risk of deficiency in calcium, so be conscious about your magnesium intake for bone health.</p>
@@ -396,6 +430,7 @@
             <h2>Your Magnesium levels are naturally higher</h2>
             <p>Magnesium works with phosphorous to create calcium for your body, and most of it is in your bones. Your higher levels of magnesium make it easier to create calcium. Do not neglect your magnesium intake, but don't stress over it either.</p>
             {% endif %}
+            </div>
 
             <br>
 
@@ -405,6 +440,7 @@
 
     {% if ironScore != None %}
     <div class="left_content animated fadeInRight">
+            <img class="phenoImage" src="https://drive.google.com/uc?id=0Bz5OkCQSuFwYT2RwU04zaURORVE">
             <h1>Iron</h1>
             <div class="rightbarbox" style="bottom: 55px;">
                 <div class="progress skill-bar ">
@@ -413,6 +449,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class="phenotext">
             {% if ironScore <= 1 %}
             <h2 >You have a naturally lower level of Iron</h2>
             <p>Iron is an essential part of your blood, and it is required for transporting oxygen in the blood. Iron deficiencies leave individuals at a greater risk of anaemia, so be sure to eat larger amounts of iron to fight against your naturally lower levels.</p>
@@ -423,6 +461,7 @@
             <h2>Your Iron levels are naturally higher</h2>
             <p>ron is an essential part of your blood, and it is required to carry oxygen to different parts of the body. You don't have to worry about iron intake as much as the average person, but neglect of iron consumption can lead to anaemia, so be sure to find areas in your diet to add iron.</p>
             {% endif %}
+            </div>
 
             <br>
 

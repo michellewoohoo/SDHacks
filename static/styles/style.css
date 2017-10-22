@@ -209,6 +209,22 @@ html{
     font-size: 25px;
 }
 
+.phenoImage {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 0px 40px 20px 20px;
+}
+
+.phenotext {
+    float: right;
+}
+
+.phenotext p {
+    font-size: 20px;
+}
+
+
 h4, h5 {
     overflow: hidden;
 }
