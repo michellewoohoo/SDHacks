@@ -21,6 +21,7 @@ def index():
      #   redirect(url_for("results"))
 
     # Fetching a protected resource using an OAuth2 token if exists.
+    
     if session.get('oauth_token'):
         for name in scopeList:
             reports.append(genomelink.Report.fetch(name=name, population='european', token=session['oauth_token']))
@@ -48,6 +49,14 @@ def results():
     #for r in reports:
 
     return render_template('results.html', proteinIntakeScore=reports[0].summary["score"], carbohydrateIntakeScore=reports[1].summary["score"], vitaminAScore=reports[2].summary["score"], vitaminB12Score=reports[3].summary["score"], vitaminDScore=reports[4].summary["score"], vitaminEScore=reports[5].summary["score"], calciumScore=reports[6].summary["score"], magnesiumScore=reports[7].summary["score"], ironScore=reports[8].summary["score"], endurancePerformanceScore=reports[9].summary["score"])
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/howitworks')
+def howitworks():
+    return render_template('howitworks.html')
 
 def retrieveData():
     '''
